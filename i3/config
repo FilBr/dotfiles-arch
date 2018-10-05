@@ -159,8 +159,8 @@ bindsym $mod+shift+p exec poweroff
 bindsym $mod+shift+Escape exec reboot
 bindsym $mod+shift+x exec betterlockscreen --lock dimblur
 bindsym $mod+shift+n exec $HOME/.config/i3/scripts/pywal.sh next
-bindsym $mod+g exec echo "" | rofi -config $HOME/.config/rofi/search-config -dmenu -p "Google Search" | xargs --no-run-if-empty -I{} google-chrome --high-dpi-support=1 --force-device-scale-factor=2 %U https://www.google.com/search?q={}
-bindsym $mod+c exec echo "" | rofi -config $HOME/.config/rofi/search-config -dmenu -p "URL" | xargs --no-run-if-empty -I{} google-chrome --high-dpi-support=1 --force-device-scale-factor=2 %U {}
+bindsym $mod+g exec echo "" | rofi -config $HOME/.config/rofi/search-config -dmenu -p "Google Search" | xargs --no-run-if-empty -I{} chromium https://www.google.com/search?q={}
+bindsym $mod+c exec echo "" | rofi -config $HOME/.config/rofi/search-config -dmenu -p "URL" | xargs --no-run-if-empty -I{} chromium {}
 bindsym Print exec scrot ~/Pictures/Screenshots/%b%d::%H-%M-%S.png -q 100
 bindsym $mod+shift+f exec urxvt -e ranger
 
